@@ -121,6 +121,7 @@ class nftables (
   Hash $sets = {},
   String $log_prefix = '[nftables] %<chain>s %<comment>s',
   String[1] $nat_table_name = 'nat',
+  Boolean $log_discarded = true,
   Variant[Boolean[false], String] $log_limit = '3/minute burst 5 packets',
   Variant[Boolean[false], Pattern[/icmp(v6|x)? type .+|tcp reset/]] $reject_with = 'icmpx type port-unreachable',
   Variant[Boolean[false], Enum['mask']] $firewalld_enable = 'mask',
