@@ -1,3 +1,11 @@
+# @summary manage in ftp (with helper)
+#
+# @param enable_passive
+#   Enable FTP passive mode support
+#
+# @param passive_ports
+#   Set the FTP passive mode port range
+#
 class nftables::rules::ftp (
   Boolean $enable_passive = true,
   Nftables::Port::Range $passive_ports = '10090-10100',

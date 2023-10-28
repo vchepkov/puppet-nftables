@@ -20,7 +20,7 @@ Enable this option to support Ceph's Monitor Daemon.
 * [`nftables::rules::dhcpv6_client`](#nftables--rules--dhcpv6_client): allow DHCPv6 requests in to a host
 * [`nftables::rules::dns`](#nftables--rules--dns): manage in dns
 * [`nftables::rules::docker_ce`](#nftables--rules--docker_ce): Default firewall configuration for Docker-CE
-* [`nftables::rules::ftp`](#nftables--rules--ftp)
+* [`nftables::rules::ftp`](#nftables--rules--ftp): manage in ftp (with helper)
 * [`nftables::rules::http`](#nftables--rules--http): manage in http
 * [`nftables::rules::https`](#nftables--rules--https): manage in https
 * [`nftables::rules::icinga2`](#nftables--rules--icinga2): manage in icinga2
@@ -579,7 +579,7 @@ Default value: `true`
 
 ### <a name="nftables--rules--ftp"></a>`nftables::rules::ftp`
 
-The nftables::rules::ftp class.
+manage in ftp (with helper)
 
 #### Parameters
 
@@ -592,7 +592,7 @@ The following parameters are available in the `nftables::rules::ftp` class:
 
 Data type: `Boolean`
 
-
+Enable FTP passive mode support
 
 Default value: `true`
 
@@ -600,7 +600,7 @@ Default value: `true`
 
 Data type: `Nftables::Port::Range`
 
-
+Set the FTP passive mode port range
 
 Default value: `'10090-10100'`
 
